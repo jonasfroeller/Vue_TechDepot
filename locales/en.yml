@@ -1,0 +1,13 @@
+button:
+  about: About
+  back: Back
+  go: GO
+  home: Home
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+home:
+  title: Welcome on Tech Depot!
+search:
+  placeholder: search technology...
+  current: "Search: {search}"
+not-found: Not found

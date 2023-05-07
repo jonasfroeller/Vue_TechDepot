@@ -1,0 +1,4 @@
+<template>
+  <HeaderVue />
+  <MainVue />
+</template>
