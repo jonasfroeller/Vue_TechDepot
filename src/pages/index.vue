@@ -25,7 +25,7 @@ const { t } = useI18n()
 
     <div>
       <button
-        m-3 text-sm btn
+        ml-3 h-full text-sm btn
         :disabled="!search"
         @click="go"
       >

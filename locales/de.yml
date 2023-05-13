@@ -3,11 +3,12 @@ button:
   back: Zurück
   go: Los
   home: Startseite
-  toggle_dark: Dunkelmodus umschalten
+  toggle_dark: Dunkelmodus ändern
   toggle_langs: Sprachen ändern
 home:
   title: Willkommen auf Tech Depot!
+  recommended: Empfehlungen
 search:
   placeholder: Technologie suchen...
-  current: "Suche: {search}"
+  current: 'Suche: {search}'
 not-found: Nicht gefunden
