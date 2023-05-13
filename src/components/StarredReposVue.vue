@@ -1,13 +1,12 @@
 <script setup lang="ts">
-</script>
-
-<script lang="ts">
 import axios from 'axios'
 
 import { type Repo } from '~/types'
 
 const { t } = useI18n()
+</script>
 
+<script lang="ts">
 export default {
   name: 'GetRequestAsyncAwait',
   data() {
@@ -44,7 +43,7 @@ export default {
     <div v-if="repos.length > 0" grid grid-cols-1 my-4 gap-4 lg:grid-cols-2 xl:grid-cols-3 :data-amount="repos.length">
       <div v-for="(repo, index) in repos" :key="index" border rounded-lg p-4 :data-repo-id="repo.id">
         <h2 flex flex-wrap items-center justify-center gap-2 text-2xl font-medium :data-user-id="repo.owner.id">
-          <a :href="repo.html_url" text-green-600 hover:underline>{{ repo.name }}</a>
+          <a :href="repo.html_url ?? '#'" text-green-600 hover:underline>{{ repo.name }}</a>
           by
           <a :href="repo.owner.html_url" my-2 flex items-center text-green-600 hover:underline>
             <img :src="repo.owner.avatar_url" alt="avatar" mr-2 h-8 w-8 rounded-full>
@@ -105,7 +104,7 @@ export default {
               Website: <a :href="repo.homepage" break-all hover:underline>{{ repo.homepage.split("/")[2].split(".")[0] }}</a>
             </p>
             <p v-if="repo?.license?.spdx_id !== null" text-purple-400>
-              License: <a hover:underline :href="repo?.license?.url ?? '#'">{{ repo.license.spdx_id }}</a>
+              License: <a hover:underline :href="repo?.license?.url ?? '#'">{{ repo?.license?.spdx_id }}</a>
             </p>
           </div>
           <div h-fit flex flex-wrap gap-2>
