@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import axios from 'axios'
-
 import { type Repo } from '~/types'
+import { fetchStarredRepos } from '~/modules/fetch_starred_repos'
 
 const { t } = useI18n()
 </script>
@@ -16,12 +15,13 @@ export default {
     }
   },
   async created() {
-    // GET request using axios with async/await
-    axios.get('https://api.github.com/users/jonasfroeller/starred?per_page=100')
-      .then((response) => {
-        this.repos = response.data
-      }).catch((error) => {
-        this.error = error.message
+    const username = 'jonasfroeller'
+    fetchStarredRepos(username)
+      .then((repos) => {
+        this.repos = Array.from(repos.values())
+      })
+      .catch((error) => {
+        this.error = error
       })
   },
 
