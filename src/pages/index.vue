@@ -15,9 +15,10 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div flex>
+  <div m-2 flex flex-wrap justify-center gap-3>
     <SearchInputVue
       v-model="search"
+      max-w-full
       :placeholder="t('search.placeholder')"
       autocomplete="false"
       @keydown.enter="go"
@@ -25,7 +26,7 @@ const { t } = useI18n()
 
     <div>
       <button
-        ml-3 h-full text-sm btn
+        h-full w-full text-sm btn
         :disabled="!search"
         @click="go"
       >

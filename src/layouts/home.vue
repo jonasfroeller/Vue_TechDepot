@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <HeaderVue />
-  <h1 flex justify-center py-4 text-center text-5xl>
+  <h1 flex justify-center break-all py-4 text-center text-5xl>
     {{ t('home.title') }}
   </h1>
   <MainVue />

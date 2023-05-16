@@ -10,7 +10,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div>
+  <div p-6>
     <div text-4xl>
       <div i-carbon-search-locate-mirror inline-block />
     </div>
@@ -26,6 +26,8 @@ watchEffect(() => {
           </RouterLink>
         </li>
       </ul>
+
+      <em>Search function doesn't work yet...</em>
     </template>
 
     <div>
