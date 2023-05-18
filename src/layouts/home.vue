@@ -8,4 +8,5 @@ const { t } = useI18n()
     {{ t('home.title') }}
   </h1>
   <MainVue />
+  <FooterVue />
 </template>

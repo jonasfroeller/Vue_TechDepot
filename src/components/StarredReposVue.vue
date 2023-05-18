@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-  <section mt-2 p-4 text-center>
+  <section mb-6 mt-2 p-4 text-center>
     <div v-if="repos.length > 0" grid grid-cols-1 my-4 gap-4 lg:grid-cols-2 xl:grid-cols-3 :data-amount="repos.length">
       <div v-for="(repo, index) in repos" :key="index" border rounded-lg p-4 :data-repo-id="repo.id">
         <h2 flex flex-wrap items-center justify-center gap-2 break-all text-2xl font-medium :data-user-id="repo.owner.id">

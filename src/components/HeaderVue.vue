@@ -26,6 +26,10 @@ export default {
           navigationBar.classList.remove('hidden')
           navigationBar.classList.remove('navigation-animation', 'fixed', 'dark:bg-[#121212]', 'bg-white', 'p-2', 'border', 'rounded-lg', 'flex', 'flex-col', 'top-1/2', 'left-1/2', 'translate-y-[-50%]', 'translate-x-[-50%]')
           this.$el.setAttribute('data-navigation-open', 'false')
+          setTimeout(() => {
+            navigationBar.style.opacity = '1'
+            navigationBar.style.transform = 'translate(-50%, -50%)'
+          }, 0)
         }
         else {
           navigationBar.classList.add('hidden')
@@ -42,8 +46,10 @@ export default {
         navigationBar.classList.add('navigation-animation', 'fixed', 'dark:bg-[#121212]', 'bg-white', 'p-2', 'border', 'rounded-lg', 'flex', 'flex-col', 'top-1/2', 'left-1/2', 'translate-y-[-50%]', 'translate-x-[-50%]')
       }
       else {
-        navigationBar.style.opacity = '0'
-        navigationBar.style.transform = 'translate(-50%, -100%)'
+        setTimeout(() => {
+          navigationBar.style.opacity = '0'
+          navigationBar.style.transform = 'translate(-50%, -100%)'
+        }, 0)
 
         setTimeout(() => {
           navigationBar.classList.add('hidden')

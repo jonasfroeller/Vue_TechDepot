@@ -7,6 +7,6 @@ const { t } = useI18n()
   <h1 flex justify-center break-all py-4 text-center text-5xl>
     {{ t('gh-repo-recommendations.title') }}
   </h1>
-  <MainVue />
   <StarredReposVue />
+  <FooterVue />
 </template>
