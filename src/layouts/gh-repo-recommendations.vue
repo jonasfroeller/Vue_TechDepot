@@ -5,7 +5,8 @@ const { t } = useI18n()
 <template>
   <HeaderVue />
   <h1 flex justify-center break-all py-4 text-center text-5xl>
-    {{ t('home.title') }}
+    {{ t('gh-repo-recommendations.title') }}
   </h1>
   <MainVue />
+  <StarredReposVue />
 </template>

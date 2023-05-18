@@ -1,13 +1,15 @@
 button:
   about: Über
   back: Zurück
-  go: Los
-  home: Startseite
+  gh-repo-recommendations: Favorisierte Repos
   toggle_dark: Dunkelmodus ändern
   toggle_langs: Sprachen ändern
+  go: Los
+  home: Startseite
 home:
   title: Willkommen auf Tech Depot!
-  recommended: Empfehlungen
+gh-repo-recommendations:
+  title: GitHub-Repository Empfehlungen
 search:
   placeholder: Technologie suchen...
   current: 'Suche: {search}'

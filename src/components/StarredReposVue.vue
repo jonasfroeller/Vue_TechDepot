@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { type Repo } from '~/types'
 import { fetchStarredRepos } from '~/modules/fetch_starred_repos'
-
-const { t } = useI18n()
 </script>
 
 <script lang="ts">
@@ -38,10 +36,7 @@ export default {
 </script>
 
 <template>
-  <section mt-8 p-4 text-center>
-    <h2 break-all text-4xl>
-      {{ t('home.recommended') }}:
-    </h2>
+  <section mt-2 p-4 text-center>
     <div v-if="repos.length > 0" grid grid-cols-1 my-4 gap-4 lg:grid-cols-2 xl:grid-cols-3 :data-amount="repos.length">
       <div v-for="(repo, index) in repos" :key="index" border rounded-lg p-4 :data-repo-id="repo.id">
         <h2 flex flex-wrap items-center justify-center gap-2 break-all text-2xl font-medium :data-user-id="repo.owner.id">
@@ -122,7 +117,58 @@ export default {
       couldn't load data
     </div>
     <div v-else>
-      loading...
+      <div class="loading-wrapper">
+        <div class="loading-animation">
+          <div border-6 border-teal-600 />
+        </div>
+      </div>
     </div>
   </section>
 </template>
+
+<style>
+  @keyframes loading-animation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  .loading-animation div {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top-color: transparent;
+    border-radius: 50%;
+  }
+
+  .loading-animation div {
+    animation: loading-animation 1s linear infinite;
+    top: 100px;
+    left: 100px
+  }
+
+  .loading-wrapper {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .loading-animation {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+  }
+
+  .loading-animation div {
+    box-sizing: content-box;
+  }
+</style>

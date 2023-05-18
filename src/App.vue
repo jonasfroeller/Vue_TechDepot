@@ -17,8 +17,26 @@ useHead({
   link: [
     {
       rel: 'icon',
+      type: 'image/png',
+      href: '/pwa-192x192.png',
+      sizes: '192x192',
+    },
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: '/safari-pinned-tab.svg',
+      color: () => isDark.value ? '#00aba9' : '#ffffff',
+    },
+    {
+      rel: 'icon',
       type: 'image/svg+xml',
       href: () => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/pwa-512x512.png',
+      sizes: '512x512',
     },
   ],
 })

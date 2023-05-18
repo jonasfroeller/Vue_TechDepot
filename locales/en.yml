@@ -1,13 +1,15 @@
 button:
   about: About
-  back: Back
-  go: GO
   home: Home
+  gh-repo-recommendations: Starred Repos
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+  back: Back
+  go: GO
 home:
   title: Welcome on Tech Depot!
-  recommended: Recommended
+gh-repo-recommendations:
+  title: GitHub-Repository Recommendations
 search:
   placeholder: search technology...
   current: 'Search: {search}'
