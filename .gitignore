@@ -56,13 +56,12 @@
 # Framework Builds
 **/*dist
 **/*build
-**/*public
 
 # Other
 .vite-ssg-dist
 .vite-ssg-temp
 *.local
-dist-ssr
 *.log
+dist-ssr
 cypress/downloads
 __snapshots__/*.snap
